@@ -1,0 +1,1035 @@
+//-------------------------
+//-------- ALL PAGES
+//-------------------------
+
+.page_header {
+	padding: 4rem 0 0;
+}
+
+//-- TEASER
+
+.pg-rooms-suites {
+	.teaser {
+		.slick-dots {
+			@include breakpoint(tablet) {
+				bottom: -6.4rem;
+			}
+		}
+		.slick-dots li.slick-active button:before {
+			@include breakpoint(tablet) {
+				opacity: 1;
+		    	color: $c-main;
+			}
+		}
+		.slick-dots li button:before {
+			@include breakpoint(tablet) {
+				opacity: 0.7;
+	  			color: #e1e1e1;
+			}
+		}
+	}
+}
+
+.teaser {
+	padding-bottom: 12.4rem;
+	background-image: url('../images/visi-darte-logo-bg.png');
+	background-repeat: no-repeat;
+    background-position: 130% 329px;
+	background-size: 40%;
+	@include breakpoint(tablet) {
+		background-position: 123% 136%;
+	}
+	@include breakpoint(mobile) {
+		padding-bottom: 9.6rem;
+		background-position: 123% 120%;
+	}
+	@extend .content-slider;
+	h3, p {
+		color: $c-main;
+	}
+	.container {
+		position: relative;
+		@include breakpoint(tablet) {
+			width: 100%;
+		}
+		@include breakpoint(mobile) {
+			padding: 0;
+		}
+	}
+	.imgSlider {
+		position: relative;
+		float: left;
+		width: 74%;
+		margin-right: 6rem;
+		@include breakpoint(tablet) {
+			width: 100%;
+			float: none;
+		}
+		.img-slide {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	&__content {
+		@include absolute(center-vertical);
+		right: 0;
+		width: 21%;
+		height: auto;
+		overflow: hidden;
+		@include breakpoint(tablet) {
+			position: static;
+			transform: none;
+			width: 90%;
+			margin: 0 auto;
+			margin-top: 10rem;
+		}
+		@include breakpoint(mobile) {
+			margin-top: 12.25rem;
+			width: 100%;
+			padding: 0 3.5rem;
+		}
+		h3 {
+			margin-top: 0;
+			@include breakpoint(tablet) {
+				font-size: 5rem;
+			}
+			@include breakpoint(mobile) {
+				margin-bottom: 4rem;
+				padding: 0 1.9rem;
+				font-size: 3.25rem;
+				text-align: left;
+			}
+		}
+		p {
+			margin-bottom: 0;
+			@include breakpoint(tablet) {
+				font-size: 3rem;
+			}
+			@include breakpoint(mobile) {
+				margin-bottom: 0;
+				font-size: 2.5rem;
+				text-align: left;
+			}
+		}
+	}
+	
+}
+
+
+
+//-- Teaser LIST
+
+.teaser-list {
+	padding-top: 11.4rem;
+	padding-bottom: 3rem;
+	background-image: url('../images/visi-darte-logo-bg.png');
+	background-repeat: no-repeat;
+    background-position: left -40rem bottom -70rem;
+	background-size: 90rem;
+	@include breakpoint(tablet) {
+		padding-bottom: 0;
+		background-image: none;
+	}
+	.container {
+		@include breakpoint(tablet) {
+			width: 100%;
+		}
+		@include breakpoint(mobile) {
+			padding: 0;
+		}
+	}
+	.listBox {
+		width: 46.5%;
+		float: left;
+		margin-right: 7%;
+		padding-bottom: 10rem;
+		@include breakpoint(tablet) {
+			width: 100%;
+			margin-right: 0;
+			background-image: url('../images/visi-darte-logo-bg.png');
+			background-repeat: no-repeat;
+		    background-position: right -20rem bottom -35rem;
+    		background-size: 60rem;
+		}
+		@include breakpoint(mobile) {
+			background-position: right -16rem bottom -28rem;
+   			background-size: 37rem;
+		}
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+		h4 {
+			font-size: 1.2rem;
+			color: $c-mainLighter;
+			text-transform: uppercase;
+			@include breakpoint(tablet) {
+				font-size: 2rem;
+			}
+			@include breakpoint(mobile) {
+				font-size: 1.5rem;
+			}
+		}
+		h3 {
+			margin: 1rem 0 2.4rem;
+			font-family: $butler;
+			font-size: 3.6rem;
+			color: $c-main;
+			@include breakpoint(tablet) {
+				font-size: 5rem;
+			}
+			@include breakpoint(mobile) {
+				margin: 2rem 0 4rem;
+				font-size: 3.25rem;
+			}
+		}
+		.prices {
+			position: absolute;
+			top: 3rem;
+			right: 0;
+			@include breakpoint(tablet) {
+				font-size: 4rem;
+			}
+			@include breakpoint(mobile) {
+				position: static;
+				float: none;
+			}
+			.cen-vertical {
+				position: relative;
+				top: -0.3rem;
+				margin-right: 1rem;
+				font-size: 1.2rem;
+				@include breakpoint(tablet) {
+					top: -0.6rem;
+					font-size: 1.6rem;
+				}
+			}
+			.num {
+				font-size: 2.4rem;
+				@include breakpoint(tablet) {
+					font-size: 3.2rem;
+				}
+				@include breakpoint(mobile) {
+					font-size: 3.75rem; 
+				}
+			}
+		}
+		p {
+			margin-bottom: 3.6rem;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 1.57;
+			color: #636363;
+			@include breakpoint(tablet) {
+				font-size: 2.4rem;
+			}
+			@include breakpoint(mobile) {
+				margin: 5rem 0;
+				font-size: 2.5rem;
+				line-height: 1.7;
+			}
+			&:empty {
+				display: none;
+			}
+		}
+		.btn-green {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			float: right;
+			padding: 2.2rem 4rem 2rem;
+			@include breakpoint(mobile) {
+				position: static;
+
+			}
+		}
+		&__content {
+			position: relative;
+			height: 30rem;
+			overflow: hidden;
+			@include breakpoint(tablet) {
+				width: 90%;
+				height: 50rem;
+				margin: 0 auto;
+			}
+			@include breakpoint(mobile) {
+				width: 100%;
+				padding: 0 5.4rem;
+				height: auto;
+			}
+		}
+	}
+	.link-more {
+		@extend .link-all-rooms;
+		position: absolute;
+		bottom: 2rem;
+		.icon-right-arrow {
+			margin-left: 1.5rem;
+		}
+		&:hover {
+			@include breakpoint(exeptGadgets) {
+				color: $c-main;
+			}
+		}
+	}
+	.img-container {
+		margin-bottom: 4rem;
+		overflow: hidden;
+		@include breakpoint(tablet) {
+			margin-bottom: 8rem;
+		}
+		@include breakpoint(mobile) {
+			margin-bottom: 6.3rem;
+		}
+		img {
+			width: 100%;
+			transform: scale(1.1);
+			transition: all ease-in-out 0.6s;
+			backface-visibility: hidden;
+			@include breakpoint(tablet) {
+				transform: none;
+			}
+		}
+	}
+	.listBox:hover{
+		.img-container img {
+			transform: scale(1);
+			backface-visibility: hidden;
+		}
+	}
+}
+
+.imgSlider {
+	&__wrapper {
+		//visibility: hidden;
+	}
+	.slick-arrow {
+		@include absolute(center-vertical);
+	}
+	&.oneImg {
+		.slick-dots {
+			display: none;
+		}
+	}
+	.slick-dots {
+		width: 100%;
+		left: 0;
+		text-align: center;
+		bottom: 4.5rem;
+		@include breakpoint(tablet) {
+			position: absolute;
+			bottom: 3.5rem;
+			left: 0;
+			margin-left: 0;
+			padding-bottom: 0;
+		}
+	}
+	.slick-dots li.slick-active button:before {
+	    opacity: 1;
+	    color: $c-white;
+	}
+	.slick-dots li button:before {
+		color: $c-white;
+		opacity: 0.7;
+	}
+}
+
+//-- SPECIAL OFFERS
+
+.left-side,
+.right-side {
+	@extend %clearfix;
+	.slick-arrow {
+		position: absolute;
+		z-index: 5;
+		display: none!important;
+	}
+	.content-slider__left,
+	.content-slider__right {
+		float: right;
+	}
+	.imgSlider {
+		width: 62%;
+		max-width: 1050px;
+		@include breakpoint(tablet) {
+			width: 100%;
+			float: none;
+		}
+	}
+	.container {
+		position: relative;
+		height: 100%;
+		overflow: hidden;
+	}
+	.content-holder {
+		@include absolute(center-vertical);
+		max-width: 340px;
+		height: auto;
+		overflow: hidden;
+		@include breakpoint(desktop--small) {
+			max-width: 44rem;
+			position: static;
+			transform: none;
+		}
+		@include breakpoint(tablet) {
+			max-width: 100%;
+		}
+	}
+	.slick-dots {
+		width: 100%;
+		text-align: center;
+		@include breakpoint(tablet) {
+			position: absolute;
+			margin-left: 0;
+			left: 0;
+		}
+		@include breakpoint(mobile) {
+			padding-bottom: 0;
+		}
+	}
+	h3 {
+		margin-top: 0rem;
+		@include breakpoint(tablet) {
+			margin-top: 6rem
+		}
+	}
+	p {
+		margin-bottom: 5rem;
+	}
+	.btn-green {
+		@include breakpoint(mobile) {
+			display: inline-block;
+			float: none;
+		}
+	} 
+}
+
+.left-side {
+	position: relative;
+	background-color: $c-main;
+	@include breakpoint(tablet) {
+		display: flex;
+		flex-direction: column;
+	}
+	.content-slider__left {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		@include breakpoint(tablet){
+			position: static;
+			order: 2;
+			padding-bottom: 8rem;
+		}
+		.container {
+			height: 100%;
+		}
+	}
+	.content-slider__right {
+		@include breakpoint(tablet) {
+			order: 1;
+		}
+	}
+	.room-details li {
+		color: $c-white;
+		&.prices {
+			color: $c-gold;
+		}
+	}
+	p {
+		color: $c-white;
+	}
+}
+
+.right-side {
+	display: flex;
+	flex-direction: row;
+	background-color: $c-offersBg;
+	@include breakpoint(tablet) {
+		flex-direction: column;
+	}
+	.content-slider__left {
+		float: left;
+		padding: 0;
+		order: 1;
+	}
+	.content-slider__right {
+		width: 38%;
+		order: 2;
+		@include breakpoint(tablet) {
+			width: 100%;
+			float: none;
+			padding-bottom: 8rem;
+		}
+		.container {
+			width: 100%;
+			padding-left: 5.7rem;
+			@include breakpoint(mobile) {
+				padding-left: 3.5rem;
+			}
+		}
+	}
+	h3,p {
+		color: $c-main;
+	}
+}
+
+.img-container {
+	img {
+		width: 100%;
+	}
+}
+
+//-- GALLERY SLIDER
+
+
+.gallery-categories {
+	margin-bottom: 5.7rem;
+	text-align: center;
+	li {
+		display: inline-block;
+		margin-right: 1.4rem;
+		&.active {
+			a {
+				color: $c-gold;
+			}
+			@include breakpoint(mobile) {
+				position: relative;
+			}
+			&:after {
+				@include breakpoint(mobile) {
+					display: block;
+					position: absolute;
+					content: "";
+					left: 0;
+					height: 2px;
+					width: 100%;
+					background-color: $c-gold;
+				}
+			}
+		}
+		&:hover {
+			@include breakpoint(exeptGadgets) {
+				a {
+					color: $c-gold;
+				}
+			}
+		}
+		@include breakpoint(mobile) {
+			margin-right: 3.2rem;
+		}
+		a {
+			font-size: 14px;
+			font-weight: 700;
+			color: $c-main;
+			@include breakpoint(mobile) {
+				font-size: 2.2rem;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.gallery-slider {
+	.imgSlider {
+		width: 100%;
+	}
+	.teaser {
+		background-size: 50%;
+		background-position: -35% 11rem;
+	}
+}
+
+//-- About hotel page
+
+.pg-about {
+	.teaser:last-child {
+		padding-top: 13rem;
+		@include breakpoint(mobile) {
+			padding-top: 3.3rem;
+		}
+	}
+}
+
+.our-story {
+	position: relative;
+	.container {
+		position: relative;
+		z-index: 5;
+		@include breakpoint(tablet) {
+			width: 100%;
+		}
+		@include breakpoint(mobile) {
+			padding: 0;
+		}
+	}
+	&__box {
+		float: left;
+		width: 50%;
+		padding: 10rem 8.6rem 9.6rem 0;
+		color: $c-main;
+		@include breakpoint(tablet) {
+			width: 100%;
+			float: none;
+			margin: 0 auto;
+			padding: 11rem 0 12.5rem;
+			background-color: $c-offersBg;
+			
+		}
+		h3 {
+			margin-bottom: 3rem;
+			font-size: 28px;
+			@include breakpoint(tablet) {
+				font-size: 5rem;
+			}
+			@include breakpoint(mobile) {
+				font-size: 3.25rem;
+			}
+		}
+		p {
+			margin: 0;
+			font-weight: 300;
+			@include breakpoint(tablet) {
+				font-size: 3rem;
+				line-height: 1.7;
+			}
+			@include breakpoint(mabile) {
+				font-size: 2.5rem;
+			}
+		}
+		&:last-child {
+			padding-left: 6.7rem;
+			padding-right: 0rem;
+			color: $c-offersBg;
+			@include breakpoint(tablet) {
+				padding-left: 0;
+				background-color: $c-main;
+			}
+		}
+	}
+	.inner-container {
+		@include breakpoint(tablet) {
+			width: 90%;
+			margin: 0 auto;
+		}
+		@include breakpoint(mobile) {
+			width: 100%;
+			padding: 0 3.5rem;
+		}
+	}
+	.bgHolder {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		@include breakpoint(tablet) {
+			display: none;
+		}
+		.bg-left,
+		.bg-right {
+			float: left;
+			width: 50%;
+			height: 100%;
+			z-index: -1;
+		}
+		.bg-left {
+			background-color: $c-offersBg;
+		}
+		.bg-right {
+			background-color: $c-main;
+		}
+	}
+}
+
+
+//-- Room SINGLE 
+
+.pg-single-room {
+	padding-top: 6rem;
+	.sec-title {
+		margin-bottom: 8rem;
+	}
+	.imgSlider {
+		@extend %clearfix;
+		width: 100%;
+		margin-bottom: 7rem;
+		img {
+			width: 100%;
+		}
+	}
+	ul[class^="items-"] {
+		@extend %clearfix;
+		margin-bottom: 6.6rem;
+		@include breakpoint(mobile) {
+			margin-top: 18rem;
+		}
+	}.imgSlider {
+		.container {
+			width: 100%;
+			@include breakpoint(mobile) {
+				padding: 0;
+			}
+		}
+	}
+	.item
+	.items-3 li {
+		width: 33.33%;
+		margin-bottom: 3.5rem;
+		@include breakpoint(mobile) {
+			width: 50%;
+		}
+	}
+}
+
+.single-body {
+	@extend .wrapUp;
+	@extend %clearfix;
+	padding-bottom: 15.5rem;
+	@include breakpoint(mobile) {
+		position: relative;
+		padding-bottom: 20rem;
+	}
+	.container {
+		display: table;
+		@include breakpoint(tablet) {
+			display: block;
+		}
+	}
+}
+.single-sidebar {
+	width: 26%;
+	font-size: 14px;
+	@include breakpoint(desktop--small) {
+		font-size: 12px;
+	}
+	@include breakpoint(tablet) {
+		width: 100%;
+		border-bottom: 2px solid $c-gold;
+		margin-bottom: 5rem;
+	}
+	@include breakpoint(mobile) {
+		margin-bottom: 8rem;
+		border-bottom: 0.45rem solid $c-gold;
+	}
+	ul {
+		list-style: none;
+	}
+	.info {
+		@include breakpoint(tablet) {
+			display: none;
+		}
+	}
+	.info li {
+		line-height: 1.57;
+		color: #636363;
+	}
+}
+
+.single-main {
+	width: 74%;
+	padding-left: 8rem;
+	border-left: 1px solid $c-gold;
+	@include breakpoint(tablet) {
+		border-left: none;
+		padding-left: 0;
+		width: 100%;
+	}
+	@include breakpoint(mobile) {
+		text-align: center;
+	}
+	h5 {
+		margin-bottom: 2.5rem;
+		color: #636363;
+		font-weight: 300;
+		@include breakpoint(tablet) {
+			font-size: 2rem;
+		}
+		@include breakpoint(mobile) {
+			font-size: 2.5rem;
+			line-height: 1.7;
+		}
+	}
+	p {
+		color: #636363;
+		font-weight: 300;
+		margin-bottom: 6.5rem;
+		text-align: left;
+		@include breakpoint(tablet) {
+			font-size: 2rem;
+		}
+		@include breakpoint(mobile) {
+			font-size: 2.5rem;
+			line-height: 1.7;
+		}
+	}
+	.btn-green {
+		float: right;
+		@include breakpoint(mobile) {
+			float: none;
+			display: inline-block;
+		}
+	}
+}
+
+.back-link {
+    position: relative;
+    top: 2rem;
+	float: left;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 2.8px;
+	color: $c-gold;
+	text-transform: uppercase;
+	transition: all ease-in-out 0.3s;
+	&:hover,
+	&:focus {
+		color: $c-main;
+	}
+	span {
+		margin-left: 1rem;
+	}
+	.icon-left-arrow {
+		position: relative;
+		top: 0.1rem;
+	}
+	@include breakpoint(mobile) {
+		@include absolute(center-horizontal);
+		top: auto;
+		bottom: 11rem;
+		font-size: 1.5rem;
+	}
+}
+
+.single-sidebar,
+.single-main {
+	display: table-cell;
+	@include breakpoint(tablet) {
+		display: block;
+		float: none;
+	}
+}
+
+.pg-single-room .single__details {
+	font-size: 14px;
+	@extend %clearfix;
+	@include breakpoint(desktop--small) {
+		font-size: 12px;
+	}
+	li {
+		margin-bottom: 4rem;
+		@include breakpoint(tablet) {
+			float: left;
+			margin-right: 3rem;
+		}
+		@include breakpoint(mobile) {
+			margin-bottom: 6rem;
+		}
+		i {
+			margin-right: 3rem;
+			font-size: 3rem;
+			color: $c-gold;
+			@include breakpoint(mobile) {
+				font-size: 4.2rem;
+			}
+		}
+		span {
+			position: relative;
+			top: -0.5rem;
+		}
+		.num {
+			margin-left: 0.5rem;
+			font-weight: 300;
+		}
+	}
+	.cen-vertical, 
+	.num {
+		font-family: $baseFont;
+		font-size: 14px;
+		font-weight: 700;
+		color: #636363;
+		@include breakpoint(desktop--small) {
+			font-size: 12px;
+		}
+		@include breakpoint(tablet) {
+			font-size: 2rem;
+		}
+		@include breakpoint(mobile) {
+			font-size: 2.3rem;
+		}
+	} 
+}
+
+.active-period {
+	margin-top: 6.8rem;
+	margin-bottom: 6rem;
+	font-weight: 700;
+	@include breakpoint(tablet) {
+		display: none;
+	}
+	.period {
+		font-weight: normal;
+	}
+}
+
+//-- CONATCT
+
+.contact__main {
+	padding: 8rem 0;
+	.container {
+		@include breakpoint(mobile) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.form-control {
+		border-radius: 0;
+	}
+	.input-group-addon {
+		border-radius: 0;
+	}
+}
+
+.contact__form {
+	float: left;
+	width: 70%;
+	@include breakpoint(tablet) {
+		width: 50%;
+	}
+	@include breakpoint(mobile) {
+		float: none;
+		order: 2;
+		width: 100%;
+	}
+	.input-wrapper {
+		width: 100%;
+		height: 43px;
+		margin-bottom: 20px;
+		border: 1px solid $c-offersBg;
+		input, textarea {
+			padding: 0 12px;
+			width: 100%;
+			height: 100%;
+			color: $c-quillGrey;
+			font-size: 14px;
+			outline: none;
+			border: none;
+			resize: none;
+			&::placeholder {
+				color: $c-quillGrey;
+			}
+		}
+	}
+	.text-address {
+		height: 80px;
+		textarea {
+			padding: 12px;
+		}
+	}
+	.text-message {
+		textarea {
+			padding: 12px;
+		}
+		height: 144px;
+	}
+	.btn-green {
+		padding: 0;
+		height: 43px;
+		width: 100%;
+		background-color: $c-mainLighter;
+		border: 1px solid $c-mainLighter;
+		color: $c-white;
+		&:hover {
+			background-color: #a38978;
+			border: 1px solid #a38978;
+		}
+	}
+}
+
+
+
+.contact__info {
+	float: left;
+	width: 30%;
+	padding-left: 3rem;
+	color: $c-main;
+	@include breakpoint(tablet) {
+		width: 50%;
+	}
+	@include breakpoint(mobile) {
+		float: none;
+		order: 1;
+		width: 100%;
+		margin-bottom: 4rem;
+		padding-left: 0;
+		text-align: center;
+	}
+	h2 {
+		font-family: $butler;
+		margin-top: 0;
+		@include breakpoint(mobile) {
+			font-size: 4rem;
+		}
+	}
+	address p {
+		@include breakpoint(mobile) {
+			font-size: 2rem;
+		}
+	}
+	a {
+		color: $c-gold;
+	}
+}
+
+.form-part {
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
+	&:nth-of-type(2) {
+		margin-right: 0;
+	}
+}
+
+
+//-- Page static
+
+.pg-static {
+	padding-bottom: 12rem;
+	background-image: url('../images/visi-darte-logo-bg.png');
+	background-repeat: no-repeat;
+	background-position: 120% 38rem;
+	background-size: 40%;
+	@include breakpoint(desktop--small) {
+		background-position: 120% 50rem;
+	}
+	@include breakpoint(tablet) {
+		background-position: 120% 120%;
+	}
+	@include breakpoint(mobile) {
+		background-position: 120% 108%;
+		background-size: 65%;
+	}
+	p {
+		margin: 0 0 2rem;
+		@include breakpoint(tablet) {
+			font-size: 16px;
+		}
+		@include breakpoint(mobile) {
+			font-size: 2.2rem;
+		}
+	}
+}
+
+.static__text {
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+    @include breakpoint(mobile) {
+		column-count: auto;
+	}
+}

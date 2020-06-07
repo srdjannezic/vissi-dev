@@ -1,0 +1,652 @@
+//-------------------------
+//----------- MAIN HEADER
+//-------------------------
+
+#mainHeader {
+	.navbar-nav>li {
+		display: inline-block;
+		float: none;
+        @include breakpoint(desktop--small) {
+            display: block;
+        } 
+	}
+    .navbar-nav>li.primary {
+        @include breakpoint(desktop--small) {
+            padding: 20px 0;
+        }
+        @include breakpoint(mobile) {
+            padding: 2rem;
+        }
+    }
+	.navbar-nav>li.primary>a.firstLevel {
+		font-size: 11px;
+		line-height: 1.1;
+		font-weight: 600;
+		color: $c-mainLight;
+        @include breakpoint(desktop--small) {
+            font-size: 24px;
+            color: $c-white;
+            font-family: $butler;
+            font-weight: normal;
+        }
+        @include breakpoint(mobile) {
+            font-size: 3rem;
+        }
+	}
+	.container {
+		position: relative;
+	}
+	.holder-btn-book {
+		display: inline-block;
+        z-index: 5;
+		@include absolute(center-vertical);
+        right: 0;
+		vertical-align: super;
+        @include breakpoint(desktop--small) {
+            right: 70px;
+        }
+        @include breakpoint(mobile) {
+            display: none;
+        }
+	}
+	.btn-book-now {
+		padding: 11px 13px 10px;
+		font-size: 11px;
+		font-weight: 600;
+        cursor: pointer;
+        &:hover {
+            background-color: $c-greenDark!important;
+        }
+	}
+}
+
+.navbar-nav {
+    display: inline-block;
+    float: none;
+    margin: 0;
+    margin-right: 100px;
+    @include breakpoint(desktop--small) {
+        margin-right: 0;
+    }
+}
+
+.navbar-nav > li > a {
+    padding-bottom: 8px;
+    padding-top: 0;
+}
+.nav > li > a {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/****************** HEADERS ******************/
+
+.navbar-fixed-top {
+    position: fixed;
+}
+
+header, header * {
+    transition: all 0.3s;
+}
+#mainHeader {
+    background: none;
+}
+.navbar-header {
+    float: none;
+}
+.navbar-brand,
+.fixed .navbar-brand {
+    display: block;
+    height: auto;
+    padding: 10px 0;
+    width: auto;
+    margin: 0;
+    text-align: left;
+    clear: none;
+}
+
+@media (min-width: 768px) {
+    header:not(.fixed) .navbar-brand {
+        float: none;
+        text-align: center;
+        clear: both;
+        width: 235px;
+    }
+}
+
+.nav > li.primary {
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+}
+.nav > li.primary.btn-nav {
+    padding-right: 0;
+}
+ul.navbar-nav > li.primary > a.firstLevel {
+    text-transform: uppercase;
+    padding-bottom: 0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .nav > li:not(.btn-nav){
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+header.header-type-1{
+    height: 100px;
+}
+
+header.header-type-1.fixed{
+	position:fixed;
+    height: 65px;
+    box-shadow: 0px 1px 16px -6px rgba(0,0,0,0.49);
+}
+
+header.header-type-1 #mainHeader{
+	background:#fff;
+}
+
+header.header-type-1 .navbar-brand{ 
+    line-height: 100px;
+    padding: 0;
+}
+header.header-type-1.fixed .navbar-brand{ 
+    line-height: 65px;
+}
+
+header.logo-position-1 .navbar-brand{ 
+	float:left !important;
+	clear:none !important;
+}
+
+header.logo-position-2 .navbar-brand{ 
+	float:none !important;
+	margin:0 !important;
+	width:100% !important;
+	text-align:center;
+}
+
+header.logo-position-3 .navbar-brand{ 
+	float:none !important;
+	margin:0 !important;
+	width:100% !important;
+	text-align:center;	
+}
+
+header.logo-position-5 .navbar-brand{ 
+	float:right !important;
+	margin:0 !important;
+	clear:none !important;
+}
+
+.fixed .navbar{min-height:10px;}
+
+.centerArrow .rsArrowLeft {
+    bottom: 0;
+    top: 0;
+    left: 10px;
+	right:auto;
+    margin: auto;
+}
+
+.centerArrow .rsArrowRight {
+    bottom: 0;
+    top: 0;
+	left:auto;
+    right: 10px;
+    margin: auto;
+}
+.centerArrow .rsNav{
+	right: 0;
+    left: 0;
+}
+
+.header-type-1.booking-search-position-1 #search-home-wrapper{
+	position:relative;
+	top:0px; 
+}
+
+.booking-search-position-2 #search-home-wrapper{
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#mainMenu {
+    text-align: left;
+    float: right;
+    
+    @include breakpoint(desktop--small) {
+        visibility: hidden;
+        opacity: 0;
+        transition: all ease-in-out 0.3s;
+        backface-visibility: hidden;
+    }
+   
+}
+#mainMenu.is-open {
+    visibility: visible;
+    opacity: 1;
+}
+#mainMenu.menu-position-1{
+	float:left;
+}
+
+#mainMenu.menu-position-2{
+	float:none;
+	margin:auto;
+}
+
+#mainMenu.menu-position-3{ 
+	float:right;
+}
+
+header.header-type-1.fixed {
+    .nav-wrapper {
+        background-size: 20rem;
+        background-position: 3rem 1rem;
+    }
+}
+.nav-wrapper {
+    @include breakpoint(desktop--small) {
+        display: flex;
+        height: 100%;
+        
+        align-items: center;
+        justify-content: center;
+        &:after {
+            display: block;
+            position: fixed;
+            top: 0rem;
+            left: 2rem;
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 15rem;
+            content: "";
+            background-image: url('../images/vissi-darte-logo-grey.svg');
+            background-repeat: no-repeat;
+            background-size: 200px;
+            background-color: $c-main;
+            background-position: -0px 20px;
+            z-index: 55;
+            @include breakpoint(mobile) {
+                width: 100%;
+                left: 0;
+                transform: none;
+                background-size: 20rem;
+                background-position: 3rem 0.5rem;
+            }
+            @include breakpoint(mobile--l) {
+                background-size: 23rem;
+                background-position: 3rem 8px;
+            }
+            @include breakpoint(mobile--s) {
+                background-size: 23rem;
+                background-position: 3rem 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .nav-wrapper:after {
+        background-position: 3rem 30px;
+    }
+}
+// @media screen and (max-device-width: 1200px) and (orientation: landscape) {
+//      .nav-wrapper {
+//         &:after {
+//             background-size: 30rem;
+//             background-position: 5.5rem 3rem;
+//         }
+//     }
+//     header.header-type-1.fixed .nav-wrapper:after {
+//         background-size: 28rem;
+//         background-position: 6rem 0.8rem;
+//     }
+// }
+@media screen and (max-device-width: 990px) and (orientation: landscape) {
+   .nav-wrapper {
+        min-height: 800px;
+   }
+   .nav-wrapper:after {
+        height: 10rem;
+   }
+}
+header.logo-position-5 #mainMenu.menu-position-1, header.logo-position-3 #mainMenu.menu-position-1, header.logo-position-3 #mainMenu.menu-position-3, header.logo-position-1  #mainMenu.menu-position-3{
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    margin: 0;
+    
+    @include breakpoint(desktop--small) {
+        position: fixed;
+        transform: none;
+        top: 0;
+        height: 100vh;
+        overflow-y: scroll;
+        //min-height: 700px;
+        width: 100%;
+        // padding-top: 100px;
+        z-index: 6;
+        background-color: $c-main;
+
+    }
+}
+
+body[dir="rtl"] #mainMenu {
+    text-align: right;
+    float: left;
+}
+#mainMenu {
+    text-align: center;
+    line-height: 0;
+}
+#mainMenu,
+#mainMenu .navbar-nav {
+    position: relative;
+    z-index: 1;
+    @include breakpoint(desktop--small) {
+        //margin-bottom: 5rem;
+    }
+    @include breakpoint(mobile--s) {
+        margin-bottom: 3rem;
+    }
+}
+.navbar-brand {
+    margin-left: -13px;
+     @include breakpoint(tablet) {
+        margin-left: -1.4rem;
+    }
+    @include breakpoint(mobile--l) {
+        margin-left: -1.4rem;
+    }
+    @include breakpoint(mobile) {
+        display: block;
+        height: auto;
+        padding: 5px 0;
+        width: 22rem;
+        text-align: left;
+        float: left;
+        clear: none;
+    }
+    @include breakpoint(mobile--l) {
+        width: 25rem;
+    }
+}
+
+#mainMenu {
+    @include breakpoint(mobile) {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        margin-top: 0;
+        border-top: none;
+    }
+}
+#mainMenu .navbar-nav {
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+#mainMenu .navbar-nav li:last-child {
+    @include breakpoint(mobile) {
+        border-bottom: none;
+    }
+}
+
+
+ul.navbar-nav > li.primary .dropdown-menu {
+    max-width: 320px;
+    width: auto;
+    white-space: nowrap;
+}
+/****************** HEADERS ******************/
+#preHeader {
+    height: 44px;
+    line-height: 44px;
+}
+.navbar-brand {
+    height: auto;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+.navbar-brand img {
+    width: 100%;
+}
+@media(max-width:767px) {
+    .navbar-brand {
+        padding: 10px 0;
+    }
+}
+.fixed .navbar-brand {
+    width: 180px;
+    @include breakpoint(mobile) {
+        width: 18rem;
+    }
+    @include breakpoint(mobile--l) {
+        width: 20rem;
+    }
+}
+.navbar {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+.navbar-fixed-top {
+    border: none;
+}
+.navbar-collapse {
+    padding: 0;
+}
+.navbar-default {
+    border: none;
+}
+
+.navbar-nav ul li {
+    position: relative;
+}
+.navbar-nav ul {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#mainMenu {
+    position: relative;
+}
+
+.navbar-nav ul li a {
+    display: block;
+    font-size: 12px;
+    padding: 11px;
+
+}
+@media(min-width:768px) {
+    .navbar-nav ul {
+        left: 0;
+        position: absolute;
+        top: 50px;
+        z-index: 1024;
+        width: 200px;
+    }
+    .navbar-nav ul ul {
+        top: 0;
+    }
+}
+.navbar-nav .Nactive .subMenu {
+    margin-left: 10px;
+}
+.dropdown-menu-right {
+    float: right !important;
+    right: 0;
+    left: auto !important;
+}
+ul.navbar-nav > li.primary .dropdown-menu li a {
+    line-height: 12px;
+    font-weight: 400;
+}
+#mainMenu .searchWrapper {
+    margin: 0;
+}
+#mainMenu .searchWrapper .form-control {
+    width: 160px;
+}
+#mainMenu .searchWrapper .form-control, #mainMenu .searchWrapper button {
+    padding: 0 12px;
+    height: 44px;
+    line-height: 44px;
+}
+.navbar-fixed-top.fixed {
+    z-index: 1031;
+}
+
+
+/****************** HEADERS ******************/
+#preHeader {
+    background: #344860;
+    color: #fff;
+}
+#preHeader a {
+    color: #fff;
+}
+
+ul.navbar-nav > li.primary > a.firstLevel {
+    display: block;
+    position: relative;
+    color: #765e51;
+    transition: all ease 0.2s;
+    @include breakpoint(desktop--small) {
+        display: inline-block;
+    }
+    &:after {
+        position: absolute;
+        bottom: -1.5px;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        background-color: $c-mainLight;
+        content: "";
+        opacity: 0;
+        @include breakpoint(desktop--small) {
+            display: none;
+        }
+    }
+}
+
+ul.navbar-nav > li.primary > a.firstLevel:focus,
+ul.navbar-nav > li.primary > a.firstLevel.active {
+    &:after {
+        @include breakpoint(tablet) {
+            opacity: 1;
+        }
+    }
+}
+ul.navbar-nav > li.primary > a.firstLevel.active,
+ul.navbar-nav > li.primary > a.firstLevel:hover,
+ul.navbar-nav > li.primary > a.firstLevel:focus {
+    background: none;
+    @include breakpoint(exeptGadgets) {
+        color: $c-gold!important;
+        transition: all ease 0.2s;
+    }
+    @include breakpoint(desktop--small) {
+        border-bottom: none;
+    }
+}
+
+ul.navbar-nav > li.primary > a.firstLevel.active {
+    &:after {
+        @include breakpoint(desktop--small) {
+            display: inline-block;
+            background-color: $c-white;
+        }
+       
+    }
+}
+
+.navbar-fixed-top {
+    @include breakpoint(desktop--small) {
+        z-index: 55555;
+    }
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+@media(max-width:767px) {
+    ul.navbar-nav > li.primary > a.firstLevel.active,
+    ul.navbar-nav > li.primary > a.firstLevel:hover,
+    ul.navbar-nav > li.primary > a.firstLevel:focus {
+        border-bottom: none;
+    }
+}
+#mainMenu .navbar-nav ul li a {
+    border-bottom: 1px solid #ddd;
+}
+.navbar-nav ul li a {
+    color: #666;
+}
+.navbar-nav ul li a:hover, .navbar-nav ul li.hover > a {
+    background: #5381BA;
+    color: #fff;
+}
+ul.navbar-nav > li.primary .dropdown > a,
+ul.navbar-nav > li.primary .dropdown {
+    color: #fff;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background: none;
+    border: none;
+}
+@media(min-width:768px) {
+    .navbar-nav ul {
+        background: #fff;
+    }
+}
+#lang-btn {
+    background: transparent;
+    border: 0;
+}
+#lang-btn:hover,
+#lang-btn:focus {
+    color: #ccc;
+}
+#lang-menu a {
+    color: #333;
+}
+.info-header svg {
+    background: #fff;
+    color: #5381BA;
+}
+.searchWrapper {
+    color: #888;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.searchWrapper button:hover {
+    background: #5381BA;
+}
+
+.breadcrumb {
+    background: transparent;
+}
+
+.header--holder {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100px;
+}

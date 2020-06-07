@@ -1,0 +1,42 @@
+//-------------------------
+//----------------VARIABLES
+//-------------------------
+
+//-----COLORS
+$c-black           : #000;
+$c-white           : #fff;
+$c-blackWhite      : #E7E6DD;
+$c-main            : #79675a;
+$c-mainLight       : #765e51;
+$c-mainLighter     : #b89f89;
+$c-green           : #7a9e1a;
+$c-greenDark       : #618501;
+$c-gold            : #c5ae60;
+$c-darkBrown       : #786457;
+$c-quillGrey       : #c5c4be;
+$c-offersBg        : #ecebe4;
+
+
+//-----PATHS
+$localFontBase: "/templates/hotel-template/fonts/";
+$imgBaseUrl   : "/images/";
+
+
+//------DIMENSIONS
+$baseFontSize: 10;
+$fullWidth: 100%;
+$fullHeight: 100%;
+
+//------FONT
+$fontDefault     : Arial, Helvetica, Tahoma, sans-serif;
+$baseFont: 'Muli', sans-serif;
+$butler: 'ButlerRegular';
+
+
+
+//------MEDIA QUERIES
+$desktop--Large  : 1700px;
+$desktop         : 1440px;
+$tablet          : 1023px;
+$mobile			 : 767px;
+

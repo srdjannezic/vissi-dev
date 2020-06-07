@@ -1,0 +1,218 @@
+//-------------------------
+//----------ROYAL SLIDER
+//-------------------------
+
+#vissi_parallax {
+    //transition: all ease 0.2s;
+}
+#sliderContainer {
+    position: relative;
+    height: 90vh;
+    //overflow: hidden;
+    @include breakpoint(slider-h) {
+        height: auto;
+    }
+}
+.introSlider {
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;//overflow: hidden;
+    @include breakpoint(slider-h) {
+        height: auto;
+    }
+    .rsContent {
+        position: relative;
+        width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+        }
+    }
+    .rsSlide {
+        position: static;
+    } 
+    .slick-slide {
+       -webkit-transform: translate3d(0,0,0);
+    }
+}
+.introSlider .infoBlock {
+    top: 20%;
+    @include breakpoint(desktop-fit) {
+        top: 23%;
+    }
+    @include breakpoint(mobile) {
+        top: 16%;
+    }
+    //bottom: 200px;
+}
+.introSlider .infoBlock h1 {
+	margin-bottom: 2.9rem;
+    font-family: $butler;
+    color: #fff;
+    //font-weight: 600;
+    font-size: 72px;
+    text-shadow: 2.1px 2.1px 2.9px rgba(123, 123, 123, 0.75);
+    text-transform: uppercase;
+    @include breakpoint(mobile) {
+        margin-bottom: 5.5rem;
+        font-size: 6.5rem;
+    }
+}
+.introSlider .infoBlock h2 {
+	margin-bottom: 6.2rem;
+    color: #fff;
+    font-family: $butler;
+    font-size: 21px;
+    font-weight: 400;
+    text-transform: none;
+    text-shadow: 2.1px 2.1px 2.9px rgba(123, 123, 123, 0.75);
+    @include breakpoint(mobile) {
+        margin-bottom: 8.2rem;
+        font-size: 3rem;
+    }
+}
+.introSlider .infoBlock a {
+    text-decoration: none;
+}
+.introSlider.rsMinW .rsThumbsArrowDisabled{
+    display: block !important;
+}
+
+
+/*************** ROYAL SLIDER ****************/
+#full-width-slider {
+    width: 100%;
+}
+.infoBlock {
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+.infoBlock .fa {
+    border: 2px solid #fff;
+    height: 100px;
+    width: 100px;
+    font-size: 60px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+.infoBlock .fa::before {
+    line-height: 100px;
+    margin: auto;
+    width: 100%;
+    text-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+.infoBlock h3 {
+    color: #fff;
+    font-size: 50px;
+    margin: 0;
+    padding-bottom: 3px;
+    text-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+.infoBlock h4 {
+    font-size: 29px;
+    font-weight: 200;
+    margin: 0;
+    padding-bottom: 3px;
+    text-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+.infoBlock p {
+    font-size: 14px;
+    margin: 4px 0 0;
+}
+.photosBy {
+    position: absolute;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0px 10px;
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    top: auto;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    z-index: 25; 
+}
+.fullWidth {
+    width: 100%;
+    margin: 0 auto 24px;
+}
+.fullWidth.introSlider {
+    width: 100%;
+    overflow: hidden;
+}
+@media screen and (min-width:960px) and (min-height:660px) {
+    .heroSlider .rsOverflow,
+    .introSlider.heroSlider {
+        height: 520px !important;
+    }
+}
+@media screen and (min-width:960px) and (min-height:1000px) {
+    .heroSlider .rsOverflow,
+    .introSlider.heroSlider {
+        height: 660px !important;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .introSlider.heroSlider,
+    .introSlider.heroSlider .rsOverflow {
+        height: 300px !important;
+    }
+    .infoBlock {
+        padding: 10px;
+        height: auto;
+        max-height: 100%;
+        min-width: 40%;
+        top: 5px;
+        right: auto;
+        font-size: 12px;
+    }
+    .infoBlock h3 {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+/*************** ROYAL SLIDER ****************/
+#sliderContainer {
+    border-bottom: 0;
+}
+#full-width-slider {
+    color: #000;
+}
+.infoBlock a {
+    color: #fff;
+}
+.photosBy {
+    background: #fff;
+    color: #000;
+} 
+.photosBy a {
+    color: #000;
+}
+#sliderContainer .btn-primary {
+    border-color: #fff;
+    color: #fff;
+}
+#sliderContainer .btn-primary:hover {
+    border-color: #5381BA;
+}
+
+.slick-track,
+.slick-list,
+.slick-list img {
+    -webkit-perspective: 2000px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    perspective: 2000px;
+    transform: translate3d(0, 0, 0);
+}

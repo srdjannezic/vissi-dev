@@ -1,0 +1,128 @@
+//-------------------------
+//---------------TYPOGRAPHY
+//-------------------------
+
+
+//------FONT-FACE
+
+// @include fontFace (fontello, /fontello, null, null, eot woff ttf svg);
+ @include fontFace (ButlerRegular, ButlerRegular, null, null, ttf woff);
+ // @include fontFace (Butler_Black, Butler-Black, null, null, ttf otf);
+ // @include fontFace (Butler_Bold, Butler-Bold, null, null, ttf otf);
+ // @include fontFace (Butler_Medium, Butler-Medium, null, null, ttf otf);
+ // @include fontFace (Butler_ExtraBold, Butler-ExtraBold, null, null, ttf otf);
+ // @include fontFace (Butler_Light, Butler-Light, null, null, ttf otf);
+ // @include fontFace (Butler_ExtraLight, Butler-ExtraLight, null, null, ttf otf);
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?o3agcj');
+  src:  url('../fonts/icomoon/icomoon.eot?o3agcj#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?o3agcj') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?o3agcj') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?o3agcj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-price-tag:before {
+  content: "\e90a";
+}
+.icon-left-arrow:before {
+  content: "\e906";
+}
+.icon-right-arrow:before {
+  content: "\e907";
+}
+.icon-moon:before {
+  content: "\e908";
+}
+.icon-person:before {
+  content: "\e909";
+}
+.icon-pen:before {
+  content: "\e900";
+}
+.icon-calendar:before {
+  content: "\e901";
+  color: #b89f89;
+}
+.icon-arrow-down:before {
+  content: "\e902";
+  color: #c5c4be;
+}
+.icon-instagram:before {
+  content: "\e903";
+  color: #d9d8d3;
+}
+.icon-facebook:before {
+  content: "\e904";
+  color: #d9d8d3;
+}
+.icon-twitter:before {
+  content: "\e905";
+  color: #d9d8d3;
+}
+
+
+//------FONT-SIZE
+
+body {
+    font-size: 0!important; 
+}
+
+$baseFontSize: 10px; // DO NOT CHANGE THIS
+
+html {
+    font-size  : $baseFontSize;
+  //change this part
+    @include breakpoint (desktop--Large) {
+        font-size: 10px; // > 1400
+    }
+    @include breakpoint (desktop-fit) {//1600
+        font-size: 0.625vw; 
+    }
+    @include breakpoint (tablet) {
+        font-size: 1.01010101010101vw;//10px - 768px
+    }
+    @include breakpoint (mobile) {//10px - 540px
+        font-size: 1.851851851851852vw;
+    }
+}
+
+
+//------GLOBAL FONT SETTINGS
+
+//------DEFAULT STYLES
+b,
+strong {
+    font-weight: bold;
+}
+i,
+em {
+    font-style: italic;
+}
+u {
+    text-decoration: underline;
+}
+
+//------STYLES
+h1 {
+    font-size: 7.2rem;
+}

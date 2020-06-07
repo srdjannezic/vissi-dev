@@ -1,0 +1,838 @@
+//-------------------------
+//-------- SECTION
+//-------------------------
+
+
+//-- Title and subtitle for all sections
+
+h3 {
+	font-family: $butler;
+}
+p {
+	font-size: 14px;
+	line-height: 1.57;
+}
+.sec-title, 
+.sec-subtitle {
+	text-align: center;
+}
+.sec-title {
+	margin: 20px 0 70px;
+	font-family: $butler;
+	font-size: 50px;
+	color: $c-main;
+	text-transform: uppercase;
+	@include breakpoint(mobile) {
+		margin: 1rem 0 7rem;
+		font-size: 6rem;
+	}
+}
+
+.sec-subtitle {
+	font-family: $baseFont;
+	font-size: 12px;
+	color: $c-mainLighter;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+	@include breakpoint(mobile) {
+		font-size: 1.5rem;
+	}
+}
+
+.sec-link {
+	padding: 6.6rem 0 10rem;
+	text-align: center;
+	background-image: url('../images/visi-darte-logo-bg.png');
+	background-repeat: no-repeat;
+	background-position: -20% -14rem;
+	background-size: 40%;
+	@include breakpoint(tablet) {
+		background-position: 117% 3rem;
+	}
+	@include breakpoint(mobile) {
+		padding: 7.5rem 0 10rem;
+		background-position: 144% 6rem;
+		background-size: 60%;
+	}
+	a {
+		font-size: 14px;
+		font-weight: 600;
+		color: $c-gold;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		@include breakpoint(mobile) {
+			font-size: 1.5rem;
+		}
+	}
+}
+//------------------------------
+
+//--- Offers Rooms details *(nights, persons, price)
+
+.room-details {
+	margin-bottom: 4.8rem;
+	list-style: none;
+	@include breakpoint(mobile) {
+		margin-bottom: 3.8rem;
+		padding: 0 1.9rem;
+		height: auto;
+    	overflow: hidden;	
+	}
+	li {
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 600;
+		color: $c-main;
+		&:first-child {
+			margin-right: 4.6rem;
+		}
+		@include breakpoint(mobile) {
+			float: left;
+			font-size: 2rem;
+			margin-right: 2.5rem;
+		}
+		i {
+			font-size: 3rem;
+			@include breakpoint(mobile) {
+				font-size: 5rem;
+			}
+		}
+		.cen-vertical {
+			position: relative;
+			top: -0.5rem;
+			margin: 0 1rem;
+			@include breakpoint(mobile) {
+				top: -1rem;
+			}
+		}
+	}
+	
+}
+
+li.prices,
+.prices {
+		margin-left: 3.4rem;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		color: $c-gold;
+		@include breakpoint(mobile) {
+			float: right;
+		}
+		.cen-vertical {
+			margin-left: 0;
+			@include breakpoint(mobile) {
+				top: -0.5rem;
+			}
+		}
+		@include breakpoint(mobile) {
+			margin-right: 0;
+			margin-left: 0;
+		}
+		.num {
+			font-size: 3rem;
+			@include breakpoint(mobile) {
+				font-size: 3.75rem;
+			}
+		}
+	}
+
+//--- Section Room slider
+
+#rooms {
+	position: relative;
+	padding-top: 18rem;
+	background-image: url('../images/visi-darte-logo-bg.png');
+	background-repeat: no-repeat;
+	background-position: 120% -80px;
+	background-size: 40%;
+	background-color: $c-white;
+	z-index: 22;
+	@include breakpoint(tablet) {
+		padding-top: 390px;
+	    background-position: 120% 51px;
+	}
+	@include breakpoint(tablet) {
+		padding-top: 360px;
+	    background-position: 120% 51px;
+	}
+	@include breakpoint(mobile) {
+		padding-top: 10rem;
+		background-position: 136% -222px;
+		background-size: 50%;
+	}
+	.slick-slide {
+		position: relative;
+	}
+	.content-slider__left {
+		position: absolute;
+		padding-right: 0;
+		width: 100%;
+		height: 100%;
+		@include breakpoint(tablet) {
+			position: static;
+			padding-right: 3.5rem;
+		}
+		.container {
+			height: 100%;
+			@include breakpoint(mobile) {
+				padding: 0;
+			}
+		}
+		.content-holder {
+			width: 300px;
+			@include breakpoint(tablet) {
+				width: 100%;
+			}
+		}
+	}
+	.slick-dots {
+		max-width: 1140px;
+		width: 90%;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-left: -10px;
+		@include breakpoint(tablet) {
+			max-width: 100%;
+			width: 100%;
+			left: 0;
+			transform: none;
+		    margin-left: 3.6%;
+		}
+		@include breakpoint(mobile) {
+			transform: none;
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+	.content-slider__right {
+		width: 61%	;
+		float: right;
+		max-width: 1100px;
+		position: relative;
+		z-index: 55;
+		@include breakpoint(tablet) {
+			width: 100%;
+		}
+	}
+}
+.rooms-slider {
+	background-color: $c-main;
+}
+
+.room-slide,
+.offer-slide {
+	@include breakpoint(tablet) {
+		display: flex!important;
+		flex-direction: column;
+		padding-left: 0!important;
+	}
+}
+
+//--- Section Offers slider
+
+#offers {
+	padding-top: 10rem;
+	@include breakpoint(mobile) {
+		background-image: url('../images/visi-darte-logo-bg.png');
+		background-repeat: no-repeat;
+	    background-position: -57% 17rem;
+    	background-size: 53%;
+	}
+	.slick-slide {
+		display: flex;
+	}
+	
+	.content-slider__left {
+		width: 62%;
+		padding: 0;
+		order: 1;
+		max-width: 982px;
+		position: relative;
+		z-index: 55;
+		@include breakpoint(tablet) {
+			width: 100%;
+			order: 1;
+		}
+	}
+
+	.content-slider__right {
+		width: 38%;
+		padding-left: 5.7rem;
+		order: 2;
+		@include breakpoint(tablet) {
+			order: 2;
+			width: 90%;
+    		margin: 0 auto;
+    		padding-left: 0rem;
+		}
+		@include breakpoint(mobile) {
+			width: 100%;
+			padding: 0 3.5rem;
+		}
+		.container {
+			width: 86%;
+			padding: 0;
+			margin: 0;
+			max-width: 33.5rem;
+			@include breakpoint(desktop--small) {
+				max-width: 44rem;
+			}
+			@include breakpoint(tablet) {
+				max-width: 100%;
+			}
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
+			.content-holder {
+				@include breakpoint(mobile) {
+					margin-bottom: 4rem;
+				}
+			}
+		}
+	}
+	.content-slider {
+		h3 {
+			color: $c-main;
+			@include breakpoint(mobile) {
+				margin-top: 5.5rem;
+				margin-bottom: 6rem;
+			}
+		}
+		p {
+			color: $c-main;
+		}
+	}
+	.btn-gold {
+		background-color: $c-green;
+		border: 1px solid $c-green;
+		&:hover {
+	        border: 1px solid $c-greenDark;
+	        background-color: $c-greenDark;
+	        color: $c-white;
+	    }
+	}
+	.slick-dots {
+		width: 100%;
+		left: 982px;
+		padding-left: 4.8rem;
+		@include breakpoint(desktop-fit) {
+			left: 62%;
+		}
+		@include breakpoint(tablet) {
+			padding-left: 0;
+		}
+		li button:before {
+			color: #bfbfbf;
+		}
+		li.slick-active button:before {
+		    color: $c-main;
+		}
+	} 
+}
+
+.offers-slider {
+	background-color: $c-offersBg;
+}
+
+//--- Section Facilityes
+
+#facility {
+	padding: 10rem 0;
+	background-color: $c-offersBg;
+	@include breakpoint(mobile) {
+		padding: 7.5rem 0;
+	} 
+	.facility__items {
+		margin-top: 7rem;
+		height: auto;
+		overflow: hidden;
+	}
+}
+
+//--- Section Location 
+
+#location {
+	position: relative;
+	background-color: $c-main;
+	height: 45.5rem;
+	visibility: visible!important;
+	@include breakpoint(desktop) {
+		height: 50rem;
+	}
+	@include breakpoint(tablet) {
+		height: auto;
+	}
+	.container {
+		@include breakpoint(tablet) {
+			display: flex;
+			flex-direction: column;
+			padding: 0;
+			width: 100%;
+		}
+	}
+	@extend .content-slider;
+	.location__info {
+		@extend .content-slider__left;
+		width: 32.3%!important;
+		padding-top: 10rem!important;
+		@include breakpoint(desktop) {
+			width: 45%!important;
+		}
+		@include breakpoint(tablet) {
+			width: 90%!important;
+			order: 2;
+			padding-right: 0!important;
+			padding-bottom: 10rem!important;
+			text-align: center;
+		}
+		@include breakpoint(mobile) {
+			width: 100%!important;
+			padding-right: 3.5rem!important;
+			padding-bottom: 6rem!important;
+		}
+		h3 {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			text-transform: initial;
+			@include breakpoint(tablet) {
+				font-size: 3.25rem;
+			}
+			@include breakpoint(mobile) {
+				margin-top: 4rem;
+			}
+		}
+		h4 {
+			font-size: 12px;
+			text-transform: uppercase;
+			color: $c-mainLighter;
+			line-height: 1.6;
+			letter-spacing: 2px;
+			@include breakpoint(tablet) {
+				font-size: 1.5rem;
+			}
+			@include breakpoint(mobile) {
+				padding: 0 6rem;
+				
+			}
+		}
+		p:empty {
+			display: none;
+		}
+		p {
+			color: $c-offersBg;
+			@include breakpoint(tablet) {
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 3.5rem;
+				font-size: 2.5rem;
+			}
+			@include breakpoint(mobile) {
+				width: 100%;
+				padding: 0 3.5rem;
+			}
+		}
+	}
+}
+
+.location__info {
+	float: left;
+
+}
+
+.location__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 63%;
+    overflow: hidden;
+    @include breakpoint(desktop) {
+    	width: 55%;
+    }
+    @include breakpoint(tablet) {
+    	position: static;
+		order: 1;
+		width: 100%;
+	}
+}
+
+#mapWrapper {
+    height: 45.5rem;
+    @include breakpoint(desktop) {
+    	height: 50rem;
+    }
+    @include breakpoint(mobile) {
+    	height: 36rem;
+    }
+   
+}
+
+//-- Slider arrows navigation for mobile only
+
+
+.content-slider-wrapper,
+.imgSlider {
+	position: relative;
+	.slick-arrow {
+		display: none;
+		outline: none;
+		width: 5.4rem;
+		height: 5.4rem;
+		border: none;
+		font-size: 0;
+		z-index: 5;
+		background-color: #f4f3f0;
+		cursor: pointer;
+		transition: all ease 0.3s;
+		@include breakpoint(mobile) {
+			display: block;
+			transition: none;
+		}
+		&:before {
+			@include absolute(center);
+			color: $c-gold;
+			font-size: 2.6rem;
+		}
+		&:hover {
+			@include breakpoint(exeptGadgets) {
+				background-color: rgba(244, 243, 240, 0.6); 
+			}
+		}
+
+	}
+	.slick-arrow {
+		@include absolute(center-vertical);
+		&:before {
+			@include absolute(center);
+			display: block;
+		}
+	}
+	.slick-next {
+		right: 0;
+	}
+	.slick-prev {
+		left: 0;
+	}
+	.slick-next:before {
+		font-family: 'icomoon';
+		content: "\e907";
+
+	}
+	.slick-prev:before {
+		font-family: 'icomoon';
+		content: "\e906";
+	}
+}
+
+//--- Common for section sliders 
+.content-slider {
+//-- Content slider Title	
+	h3 {
+		margin: 7rem 0 2.8rem;
+		font-size: 28px;
+		color: $c-white; 
+		@include breakpoint(desktop--small) {
+			margin: 4rem 0 2.2rem;
+			font-size: 26px;
+		}
+		@include breakpoint(tablet) {
+			font-size: 5rem;
+		}
+		@include breakpoint(mobile) {
+			margin: 4rem 0 3rem;
+			font-size: 3.2rem;
+			text-align: center;
+		}
+	}
+//-- Content slider Text	
+	p {
+		margin-bottom: 3.5rem;
+		font-weight: 300;
+		color: $c-white;
+		@include breakpoint(desktop--small) {
+			font-size: 13px;
+		}
+		@include breakpoint(tablet) {
+			font-size: 3rem;
+		}
+		
+		@include breakpoint(mobile) {
+			margin-bottom: 5rem;
+			padding: 0 1.9rem;
+			font-size: 2.5rem;
+			line-height: 1.7;
+			text-align: center;
+		}
+	}
+
+	.slick-slide {
+		//margin-left: 20px;
+		transition: opacity 1.25s ease-out;
+		@include breakpoint(desktop--small) {
+			margin-left: 0;
+		}
+	}
+	.slick-slide.slick-current.slick-center {
+		opacity: 1;
+	}
+	
+	.btn-holder {
+		@include breakpoint(mobile) {
+			text-align: center;
+		}
+	}
+//-- Sections slider button	
+	.btn-gold {
+		position: absolute;
+		bottom: 13.5rem;
+		@include breakpoint(desktop--small) {
+			bottom: 10rem;
+			font-size: 12px;
+		}
+		@include breakpoint(tablet) {
+			position: static;
+		}
+		@include breakpoint(mobile) {
+		    display: inline-block;
+    		float: none;
+    		font-size: 1.75rem;
+    	}
+	}
+	.slick-arrow {
+		top: 30rem;
+		@include breakpoint(mobile--s) {
+			top: 30.5rem;
+		}
+	}
+}
+
+.offers-slider {
+	.slick-arrow {
+		background-color: $c-main;
+	}
+}
+
+//-- Link to all rooms offer
+.link-all-rooms {
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: $c-gold;
+	text-transform: uppercase;
+	@include breakpoint(desktop--small) {
+		font-size: 12px;
+	}
+	@include breakpoint(mobile) {
+		font-size: 1.5rem;
+		letter-spacing: 0.3rem;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+        color: $c-blackWhite;
+    }
+	.icon-right-arrow {
+		position: relative;
+		top: 0.08px;
+		font-size: 12px;
+		vertical-align: top;
+		@include breakpoint(mobile) {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.slick-dots {
+	position: absolute;
+	left: 10px;
+	bottom: 3.5rem;
+	@include breakpoint(tablet) {
+		position: static;
+		padding-bottom: 4rem;
+		margin-left: 3.6%;
+	    margin-top: 3rem;
+	}
+	@include breakpoint(mobile) {
+		margin-top: 0.5rem;
+		margin-left: 0;
+		padding-bottom: 7rem;
+		text-align: center;
+	}
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    &.slick-active {
+    	button:before {
+    		color: $c-white;
+    	}
+    }
+    @include breakpoint(mobile) {
+    	margin: 0 0.9rem;
+    }
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 34px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    color: #D7D2CE;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @include breakpoint(desktop--small) {
+		font-size: 36px;
+	}
+	@include breakpoint(mobile) {
+		font-size: 5rem;
+	}
+}
+
+
+
+.content-slider__right,
+.content-slider__left {
+	//float: left;
+	@include breakpoint(tablet) {
+		float: none;
+		clear: both;
+	}
+}
+
+.content-slider__left {
+	//width: 25%;
+	padding: 5.5rem 7rem 3.8rem 0;
+	@include breakpoint(tablet) {
+		order: 2;
+		width: 90%;
+		margin: 0 auto;
+	}
+	@include breakpoint(mobile) {
+		width: 100%;
+		padding: 6rem 3.5rem 3.8rem;
+	}
+}
+
+.content-slider__right {
+	//width: 75%;
+	@include breakpoint(tablet) {
+		order: 1;
+		width: 100%;
+	}
+}
+
+[class*='-image-box'] {
+	img {
+		width: 100%;
+	}
+}
+
+//--- Testimonials
+
+#testimonial {
+	position: relative;
+	padding: 24rem 0 10rem;
+	background-image: url('../images/visi-darte-logo-bg.png');
+	background-repeat: no-repeat;
+	background-position: 124% -380px;
+	background-size: 40%;
+	@include breakpoint(tablet) {
+		background-position: -13rem -21rem;
+   		background-size: 40%;
+	}
+	@include breakpoint(mobile) {
+	    background-position: -13rem -21rem;
+   		background-size: 65%;
+	}
+	@include breakpoint(mobile) {
+		padding: 23rem 0 8rem;
+	}
+	.sec-subtitle {
+		@include breakpoint(mobile) {
+			margin-bottom: 5rem;
+		}
+	}
+	.quotes {
+		p {
+			margin-bottom: 5.3rem;
+			padding: 0 10rem;
+			font-family: $butler;
+			font-size: 21px;
+			color: #636363;
+			line-height: 1.7;
+			text-align: center;
+			@include breakpoint(mobile) {
+				margin-bottom: 4rem;
+				padding: 0 3rem;
+				font-size: 2.5rem;
+			}
+		}
+	}
+	.author {
+		margin-bottom: 5.3rem;
+		font-size: 18px;
+		color: #636363;
+		font-weight: 700;
+		text-align: center;
+		@include breakpoint(mobile) {
+			font-size: 2.5rem;
+		}
+		span {
+			font-weight: normal;
+			@include breakpoint(mobile) {
+				display: block;
+			}
+		}
+	}
+	.slick-dots {
+		position: static;
+		padding-bottom: 0;
+		margin: 0;
+		text-align: center;
+		li button:before {
+			color: #bfbfbf;
+		}
+		li.slick-active button:before {
+		    color: $c-main;
+		}
+	}
+	.quotes-sign {
+		@include absolute(center-horizontal);
+		top: 8rem;
+		img {
+			@include breakpoint(mobile) {
+				width: 8rem;
+			}
+		}
+		
+	}
+}
+
+//-- On home page init slider when DOM is ready
+.pg-home .content-slider {
+	visibility: hidden;
+}
+

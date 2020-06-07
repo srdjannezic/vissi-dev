@@ -1,0 +1,56 @@
+/*------------------------------------------------------------------------------
+*    CSS Document (http://www.w3.org/Style/CSS/)
+*    For STYLEGUIDE, reffer to /config/_styleguide.scss
+-----------------------------------------------------------------------------*/
+
+//------ALL VARIABLES
+@import 'config/variables';
+
+//------MIXINS
+@import 'mixins/breakpoints';
+@import 'mixins/borderRadius';
+@import 'mixins/transition';
+@import 'mixins/transform';
+@import 'mixins/calc';
+@import 'mixins/placeholder';
+@import 'mixins/fontFace';
+@import 'mixins/gradient';
+@import 'mixins/vendor-prefixes';
+@import 'mixins/absolute-center';
+
+//-------TEMPLATE CSS
+@import 'template-css/layout';
+@import 'template-css/main';
+
+
+//------MAIN CONFIG
+//@import 'config/reset';
+@import 'config/baseConfig';
+@import 'config/typography';
+@import 'config/helpers';
+
+//------LAYOUTS
+
+//------COMMON
+
+ //------BLOCKS
+@import 'blocks/mainHeader';
+@import 'blocks/section';
+@import 'blocks/footer';
+
+
+//------COMPONENTS
+@import 'components/buttons';
+@import 'components/booking-search';
+
+//------FACILITY
+@import 'facility/items-grid';
+
+//------PAGES
+@import 'pages/pages';
+
+
+// //------SLIDER±S
+@import 'sliders/introSlider';
+@import 'sliders/slick';
+

@@ -1,0 +1,120 @@
+<?php
+/* ==============================================
+ * CSS AND JAVASCRIPT USED IN THIS MODEL
+ * ==============================================
+ */
+// $stylesheets[] = array('file' => DOCBASE.'js/plugins/isotope/css/style.css', 'media' => 'all');
+// $javascripts[] = '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js';
+// $javascripts[] = DOCBASE.'js/plugins/isotope/jquery.isotope.sloppy-masonry.min.js';
+
+// $stylesheets[] = array('file' => DOCBASE.'js/plugins/lazyloader/lazyloader.css', 'media' => 'all');
+// $javascripts[] = DOCBASE.'js/plugins/lazyloader/lazyloader.js';
+
+// $stylesheets[] = array('file' => '//cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/3.5.5/css/star-rating.min.css', 'media' => 'all');
+// $javascripts[] = '//cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/3.5.5/js/star-rating.min.js';
+
+// $stylesheets[] = array('file' => DOCBASE.'js/plugins/royalslider/royalslider.css', 'media' => 'all');
+// $stylesheets[] = array('file' => DOCBASE.'js/plugins/royalslider/skins/minimal-white/rs-minimal-white.css', 'media' => 'all');
+// $javascripts[] = DOCBASE.'js/plugins/royalslider/jquery.royalslider.min.js';
+
+require(getFromTemplate('common/send_comment.php', false));
+
+require(getFromTemplate('common/header.php', false)); ?>
+
+<main id="page" class="pg-static">
+
+    <?php include(getFromTemplate('common/page_header.php', false)); ?>
+
+    <div id="content">
+
+        <div class="container" itemprop="text">
+        
+            <?php include(getFromTemplate('common/slider.php', false)); ?>
+
+            <div class="alert alert-success" style="display:none;"></div>
+            <div class="alert alert-danger" style="display:none;"></div>
+            
+            <div class="static__text">
+                <?php
+                $widgetsLeft = getWidgets('left', $page_id);
+                $widgetsRight = getWidgets('right', $page_id);
+                
+                if(!empty($widgetsLeft)){ ?>
+                    <div class="">
+                        <?php displayWidgets('left', $page_id); ?>
+                    </div>
+                    <?php
+                } ?>
+                
+
+                <?php echo $page['text']; ?>
+
+                
+                <?php
+                if(!empty($widgetsRight)){ ?>
+                    <div class="">
+                        <?php displayWidgets('right', $page_id); ?>
+                    </div>
+                    <?php
+                } ?>
+            </div>
+
+            <div class="">
+                <?php
+                $lz_offset = 1;
+                $lz_limit = 9;
+                $lz_pages = 0;
+                $num_records = 0;
+                $result = $db->query('SELECT count(*) FROM pm_article WHERE id_page = '.$page_id.' AND checked = 1 AND (publish_date IS NULL || publish_date <= '.time().') AND (unpublish_date IS NULL || unpublish_date > '.time().') AND lang = '.LANG_ID);
+                if($result !== false){
+                    $num_records = $result->fetchColumn(0);
+                    $lz_pages = ceil($num_records/$lz_limit);
+                }
+                if($num_records > 0){
+                    
+                    $result_tag = $db->query('SELECT * FROM pm_tag WHERE pages REGEXP \'(^|,)'.$page_id.'(,|$)\' AND checked = 1 AND lang = '.LANG_ID.' ORDER BY rank');
+                    if($result_tag !== false){
+                        $nb_tags = $db->last_row_count();
+                        
+                        if($nb_tags > 0){ ?>
+                    
+                            <nav id="filter" class="text-center mt20">
+                                <div class="btn-group">
+                                    <a href="" class="btn btn-default" data-filter="*"><?php echo $texts['ALL']; ?></a>
+                                    <?php
+                                    foreach($result_tag as $i => $row){
+                                        $tag_id = $row['id'];
+                                        $tag_value = $row['value']; ?>
+                                        
+                                        <a href="" class="btn btn-default" data-filter=".tag<?php echo $tag_id; ?>"><?php echo $tag_value; ?></a>
+                                        
+                                        <?php
+                                    } ?>
+                                </div>
+                            </nav>
+                            <?php
+                        }
+                    } ?>
+                    
+                    <div class="isotopeWrapper clearfix isotope lazy-wrapper" data-loader="<?php echo getFromTemplate('common/get_articles.php'); ?>" data-mode="click" data-limit="<?php echo $lz_limit; ?>" data-pages="<?php echo $lz_pages; ?>" data-more_caption="<?php echo $texts['LOAD_MORE']; ?>" data-is_isotope="true" data-variables="page_id=<?php echo $page_id; ?>&page_alias=<?php echo $page['alias']; ?>">
+                        <?php include(getFromTemplate('common/get_articles.php', false)); ?>
+                    </div>
+                    <?php
+                } ?>
+            </div>
+            
+            <?php
+            $nb_comments = 0;
+            $item_type = 'page';
+            $item_id = $page_id;
+            $allow_comment = $page['comment'];
+            $allow_rating = $page['rating'];
+            if($allow_comment == 1){
+                $result_comment = $db->query('SELECT * FROM pm_comment WHERE id_item = '.$item_id.' AND item_type = \''.$item_type.'\' AND checked = 1 ORDER BY add_date DESC');
+                if($result_comment !== false)
+                    $nb_comments = $db->last_row_count();
+            }
+            include(getFromTemplate('common/comments.php', false)); ?>
+        </div>
+    </div>
+</main>

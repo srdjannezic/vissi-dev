@@ -1,0 +1,245 @@
+//-------------------------
+//--------------BUTTONS
+//-------------------------
+
+.btn {
+    text-transform: uppercase;
+    border-radius: 0;
+    line-height: 1;
+    transition: all ease-in-out 0.3s;
+    outline: none!important;
+    &:focus,
+    &:active,
+    &:visited {
+        outline: none;
+        box-shadow: none;
+    }
+}
+.btn-number {
+    padding: 2px;
+}
+
+.btn-primary {
+    background: none;
+    color: #fff;
+    background-color: $c-green;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #5381BA;
+    color: #fff;
+}
+.btn-default {
+    background: none;
+    color: #555;
+}
+
+.btn-green {
+    background-color: $c-green;
+    border: 1px solid $c-green;
+    @include breakpoint(mobile) {
+        font-size: 1.75rem;
+    }
+    &:hover {
+        border: 1px solid $c-greenDark;
+        background-color: $c-greenDark;
+        color: $c-white;
+    }
+}
+
+.btn-gold,
+.btn-green {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 2.2rem 6rem 2rem;
+   
+    color: $c-white;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.btn-gold {
+    border: 1px solid $c-gold;
+    &:hover {
+        border: 1px solid $c-blackWhite;
+        color: $c-white;
+    }
+    &:focus,
+    &:active {
+        color: $c-white;
+        outline-offset: 0px;
+    }
+}
+
+.btn-purchase {
+    position: relative;
+    width: 34.4rem;
+    height: 43px;
+    font-size: 14px;
+    color: $c-white;
+    letter-spacing: 2.8px;
+    background-color: $c-gold;
+    @include breakpoint(tablet) {
+        height: 6rem;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $c-blackWhite;
+        color: $c-gold;
+    }
+    span {
+        @include absolute(center-vertical);
+        left: 2.8rem;
+    }
+    .icon-right-arrow {
+        @include absolute(center-vertical);
+        right: 1.4rem;
+    }
+}
+
+.btn-sub {
+    position: absolute;
+    right: 0;
+    padding: 14px 5rem;
+    background-color: transparent;
+    border: 1px solid $c-gold;
+    color: $c-white;
+    span {
+        line-height: 1;
+        letter-spacing: 2.8px;
+    }
+    @include breakpoint(tablet) {
+        padding: 2.25rem 6.5rem;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        border: 1px solid $c-blackWhite;
+        color: $c-offersBg;
+    }
+}
+
+//--- Explore royal slider button
+
+.btn-royalSlider {
+    padding: 22px 68px; 
+    background-color: $c-white;
+    box-shadow: 0px 5px 16px -6px rgba(0,0,0,0.75);
+    @include breakpoint(mobile) {
+        padding: 2.2rem 4rem;
+    }
+    &:hover {
+        background-color: rgba(255,255,255,0.7);
+        box-shadow: none;
+    }
+    span {
+        font-size: 14px;
+        color: $c-gold;
+        letter-spacing: 2.8px;
+        @include breakpoint(mobile) {
+            font-size: 2.8rem;
+        }
+    }
+}
+
+
+//--- mobile menu btn
+
+.ham-menu-btn {
+    display: none;
+    cursor: pointer;
+    @include breakpoint(desktop--small) {
+        display: block;
+        float: right;
+        @include absolute(center-vertical);
+        right: 0;
+    }
+    .line {
+        @include breakpoint(desktop--small) {
+            width: 50px;
+            height: 5px;
+            background-color: $c-main;
+            display: block;
+            margin: 8px auto;
+            transition: all 0.3s ease-in-out;
+        }
+        @include breakpoint(mobile) {
+            width: 35px;
+            height: 4px;
+            margin: 6px auto;
+        }
+
+    }
+    &.is-active {
+        z-index: 55;
+        top: 7rem;
+        @include breakpoint(tablet) {
+            top: 55px;
+        }
+        @include breakpoint(mobile) {
+            top: 3.5rem;
+            right: 0rem;
+        }
+        @include breakpoint(mobile--l) {
+            top: 50px; 
+            right: 1rem;   
+        }
+
+        .line {
+            background-color: $c-white;
+        }
+    }
+    &.is-active .line:nth-child(2){
+        opacity: 0;
+    }
+
+    &.is-active .line:nth-child(1){
+        -webkit-transform: translateY(13px) rotate(45deg);
+        -ms-transform: translateY(13px) rotate(45deg);
+        -o-transform: translateY(13px) rotate(45deg);
+        transform: translateY(13px) rotate(45deg);
+        @include breakpoint(mobile) {
+            transform: translateY(10px) rotate(45deg);
+        }
+    }
+
+    &.is-active .line:nth-child(3){
+        -webkit-transform: translateY(-13px) rotate(-45deg);
+        -ms-transform: translateY(-13px) rotate(-45deg);
+        -o-transform: translateY(-13px) rotate(-45deg);
+        transform: translateY(-13px) rotate(-45deg);
+         @include breakpoint(mobile) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+} 
+@media screen and(max-width: 375px) {
+    .ham-menu-btn.is-active {
+        top: 55px;
+    }
+}
+
+//-- Book mibile fixed to the bottom always
+
+.book-mob-fix {
+    display: none;
+    @include breakpoint(mobile) {
+        // display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        padding: 1.4rem;
+        text-align: center;
+        background-color: $c-white;
+        z-index: 99999;
+        border-top: 1px solid $c-offersBg;
+    }
+    .btn-green {
+        float: none;
+        padding: 1.2rem 3.6rem;
+        display: inline-block;
+    }
+}

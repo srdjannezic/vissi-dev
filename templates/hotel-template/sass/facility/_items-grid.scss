@@ -1,0 +1,84 @@
+//-------------------------
+//-------- FACILITY ITEMS 
+//-------------------------
+
+ul[class^="items-"] {
+	li {
+		float: left;
+		padding: 1.4rem 0;
+		list-style-type: none;
+		@include breakpoint(tablet) {
+			position: relative;
+			height: 15rem;
+		}
+		@include breakpoint(mobile) {
+			height: 13rem;
+		}
+		img {
+			margin-right: 6.5rem;
+		}
+	}
+	li span {
+		font-family: $butler;
+		font-size: 16px;
+		color: #636363;
+		position: relative;
+    	top: 0.5rem;
+		@include breakpoint(tablet) {
+			display: block;
+			@include absolute(center-horizontal);
+			top: auto;
+			bottom: 0;
+			width: 100%;
+			font-size: 3rem;
+		}
+		@include breakpoint(mobile) {
+			display: block;
+			font-size: 2rem;
+		}
+	}
+}
+
+.items-1 li {
+	width: 100%;
+}
+.items-2 li {
+	width: 50%;
+}
+.items-3 li {
+	width: 33.33%;
+	@include breakpoint(tablet) {
+		width: 50%;
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+	&:nth-child(3n-1) {
+		padding-left: 7rem;
+		@include breakpoint(tablet) {
+			padding-left: 0rem;
+		}
+	}
+	&:nth-child(3n) {
+		padding-left: 18rem;
+		@include breakpoint(tablet) {
+			padding-left: 0rem;
+		}
+	}
+	img {
+		@include breakpoint(tablet) {
+			display: inline-block;
+			width: 6.5rem;
+			margin-right: 0!important;
+			margin-bottom: 3rem;
+		}
+	} 
+}
+.items-4 li {
+	width: 25%;
+}
+.items-5 li {
+	width: 33.33%;
+}
+.items-6 li {
+	width: 33.33%;
+}

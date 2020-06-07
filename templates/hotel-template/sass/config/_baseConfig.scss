@@ -1,0 +1,72 @@
+//-------------------------
+//--------------BASE CONFIG
+//-------------------------
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+body {
+    font-family: $baseFont;
+    font-size: 0;
+    overflow-x: hidden;
+}
+.container {
+	max-width: 1140px;
+	width: 90%;
+	margin: 0 auto;
+    padding: 0;
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0 3.5rem;
+    }
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+    margin: 0;
+}
+
+p:empty {
+    display: none;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+div#cookies-notice {
+    display: none;
+}
+
+h1,h2,h3,h4 {
+    font-weight: normal;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+#overlay{
+  position:fixed;
+  z-index:99999;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: $c-main;
+  transition: 1s 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 84px;
+  }
+}
+
+
+
